@@ -2,23 +2,33 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  let cadena = 'Hola alumnos de Numen'
+
+  const objeto = {
+    uno: 'uno',
+    dos: 'dos'
+  }
+
+  const lista = [1,2,3,4,5,6];
+
+  const listaMapeada = lista.map((item,index) => <li key={index + 1}>{item}</li>);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <h1 style={{
+        color: 'red',
+        fontSize: 50
+      }}>Hola</h1>
+
+      <p id='1' className='Numen'>{cadena}</p>
+      <img src="" alt="" />
+
+      <p>{objeto.uno}</p>
+      <p>{objeto.dos}</p> */}
+      <ul>
+          {listaMapeada}
+      </ul>
+    </>
   );
 }
 
