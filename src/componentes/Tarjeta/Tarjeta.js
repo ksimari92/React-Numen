@@ -1,26 +1,19 @@
 import React from 'react';
-import Avatar from '../Avatar/Avatar';
 import './Tarjeta.css';
+import TarjetaImagen from './TarjetaImagen';
+import TarjetaNombre from './TarjetaNombre';
+import TarjetaPrecio from './TarjetaPrecio';
+import TarjetaBoton from './TarjetaBoton';
 
-const Tarjeta = ({email, nombre}) => {
-
-    
-
-    // // const props = {
-    // //          email: "1@gmail.com",
-    // //         nombre: "Petra"
-    // // }
-
-    // const {email, nombre} = props;
+const Tarjeta = ({producto}) => {
 
     return (
-        <>
-            <div className='tarjeta'>
-                <Avatar />
-                <h3>{nombre}</h3>
-                <p>Email: {email}</p>
-            </div>
-        </>
+     <div className='tarjeta'>
+        <TarjetaNombre nombre={producto.producto} />
+        <TarjetaImagen url={producto.imagen} />
+        <TarjetaPrecio precio={producto.precio}/>
+       <TarjetaBoton/>
+     </div>
     );
 }
 
