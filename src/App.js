@@ -1,6 +1,8 @@
 import Tarjeta from "./componentes/Tarjeta/Tarjeta";
 import pan from './imagenes/pan.jpg'
 import Estados from "./componentes/Estados/Estados";
+import Theme from "./componentes/Theme/Theme";
+import CambiarImagen from "./componentes/CambiarImagen/CambiarImagen";
 
 function App() {
   
@@ -40,7 +42,8 @@ function App() {
       } */}
 
       {/* <img src={pan} alt="" /> */}
-      <Estados/>
+      {/* <Estados/> */}
+      <CambiarImagen/>
     </>
   );
 }
