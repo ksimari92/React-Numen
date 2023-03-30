@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, {  useContext, useState } from 'react'
+import { UserContext } from '../../App';
+
 import imagenPerro from '../../imagenes/pan.jpg'
 
 
@@ -11,13 +13,16 @@ const CambiarImagen = () => {
     const [mostrarImagen, setMostrarImagen] = useState(imagenes.img1);
 
     const cambiarImagen = () => {
-        if (mostrarImagen == imagenes.img1) {
+        if (mostrarImagen === imagenes.img1) {
             setMostrarImagen(imagenes.img2);
         } else {
             setMostrarImagen(imagenes.img1)
         }
     }
 
+    const users = useContext(UserContext);
+
+    console.log(users)
 
   return (
     <>
