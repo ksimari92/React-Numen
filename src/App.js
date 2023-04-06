@@ -6,6 +6,7 @@ import CambiarImagen from "./componentes/CambiarImagen/CambiarImagen";
 import { createContext, useEffect, useState } from "react";
 import Avatar from "./componentes/Avatar/Avatar";
 import Rutas from "./componentes/Routes/Rutas";
+import Counter from "./componentes/Counter/Counter";
 
 export const UserContext = createContext();  // crear un contexto vacia
 
@@ -54,10 +55,10 @@ function App() {
 
   return (
     <>
-    <UserContext.Provider value={usuarios}>
+    {/* <UserContext.Provider value={usuarios}>
         <Rutas/>
-    </UserContext.Provider>
-
+    </UserContext.Provider> */}
+        <Counter/>
     </>
   );
 }
